@@ -1,4 +1,6 @@
-class Solution1143{
+package LCS;
+
+class Solution1143 {
     public int longestCommonSubsequence(String text1, String text2) {
         int n1 = text1.length();
         int n2 = text2.length();
