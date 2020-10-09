@@ -29,5 +29,6 @@ public class BinarySearch {
         //int n = arr.length;
         System.out.println(search(arr,  target));
     }
+    
 }
 
