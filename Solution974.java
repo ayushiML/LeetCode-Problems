@@ -1,6 +1,5 @@
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class Solution974 {
   
@@ -9,7 +8,21 @@ public class Solution974 {
         /*
          * sum(i-j) = sum(0,j) - sum(0,i); quatient *k + rem = number sum(i-j) =
          * (q1-q2)*k +(rem1- rem2) rem1 == rem2 give subarray with divisible by k
+         * 
+         * 
+         * Given an array A of integers, return the number of (contiguous, non-empty) subarrays that have a sum divisible by K.
+
+ 
+
+Example 1:
+
+Input: A = [4,5,0,-2,-3,1], K = 5
+Output: 7
+Explanation: There are 7 subarrays with a sum divisible by K = 5:
+[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
          */
+
+
         int n = arr.length;
         int[] mod = new int[k];
         Arrays.fill(mod, 0);
