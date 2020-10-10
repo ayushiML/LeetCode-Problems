@@ -52,11 +52,11 @@ Explanation: There are 7 subarrays with a sum divisible by K = 5:
 
         int arr[] = { 4, 5, 0, -2, -3, 1 };
         int k = 5;
-        int n = arr.length;
+        
         System.out.println(subarraysDivByK(arr, k));
         int arr1[] = { 4, 5, 0, -12, -23, 1 };
         int k1 = 5;
-        int n1 = arr1.length;
+      
         subarraysDivByK = subarraysDivByK(arr1, k1);
         System.out.println(subarraysDivByK); 
     } 

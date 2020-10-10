@@ -1,7 +1,8 @@
 package LCS;
 
-class Solution1143 {
-    public int longestCommonSubsequence(String text1, String text2) {
+class LCSmain1143
+ {
+    public static int longestCommonSubsequence(String text1, String text2) {
         int n1 = text1.length();
         int n2 = text2.length();
 
@@ -31,13 +32,13 @@ class Solution1143 {
     }
     public static void main(String[] args) 
     { 
-      Solution1143 lcs = new Solution1143(); 
+     // LCSmain1143 lcs = new LCSmain1143(); 
       String s1 = "AGGTAB"; 
       String s2 = "GXTXAYB"; 
     
       
     
       System.out.println("Length of LCS is" + " " + 
-                                    lcs.longestCommonSubsequence( s1, s2) ); 
+                                    longestCommonSubsequence( s1, s2) ); 
     }
 }
