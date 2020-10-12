@@ -5,7 +5,8 @@ import java.util.Set;
 
 public class BubbleString {
     public static boolean buddyStrings(String A, String B) {
-
+    //https://leetcode.com/explore/challenge/card/october-leetcoding-challenge/560/week-2-october-8th-october-14th/3492/
+    
         int n = A.length();
         int m = B.length();
 
@@ -37,10 +38,10 @@ public class BubbleString {
     }
 
     public static void main(String[] args) {
-        {   String a = "abcd";
+           String a = "abcd";
             String b = "abdc";
             System.out.println(buddyStrings(a,b));
-        }
+        
     }
     
 }
