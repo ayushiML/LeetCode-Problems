@@ -1,3 +1,9 @@
+package Tree;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class DuplicateSubTree {
     static Map<String, Integer> map;
@@ -41,13 +47,13 @@ public class DuplicateSubTree {
 
     public static void main(String[] args) {
         TreeNode root = null;
-        root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.right.left = new Node(2);
-        root.right.left.left = new Node(4);
-        root.right.right = new Node(4);
+        root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.right.left = new TreeNode(2);
+        root.right.left.left = new TreeNode(4);
+        root.right.right = new TreeNode(4);
         findDuplicateSubtrees(root);
     }
     

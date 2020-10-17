@@ -28,6 +28,7 @@ public class HeapSort {
     int temp = arr[0];
     arr[0] = arr[i];
     arr[i] = temp;
+  // call max hap on reduced heap 
 
     heapify(arr, i, 0);
 

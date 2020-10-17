@@ -1,3 +1,8 @@
+package Tree;
+import java.util.LinkedList;
+import java.util.Queue;
+
+
 public class SerializeDeserialize {
     public String serialize(TreeNode root) {
         StringBuffer sb = new  StringBuffer("");
@@ -53,13 +58,13 @@ public class SerializeDeserialize {
     }
     public static void main(String[] args) {
     TreeNode root = null;
-    root = new Node(1);
-    root.left = new Node(2);
-    root.right = new Node(3);
-    root.left.left = new Node(4);
-    root.right.left = new Node(2);
-    root.right.left.left = new Node(4);
-    root.right.right = new Node(4);
+    root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.right.left = new TreeNode(2);
+        root.right.left.left = new TreeNode(4);
+        root.right.right = new TreeNode(4);
         
     }
     static class TreeNode {
