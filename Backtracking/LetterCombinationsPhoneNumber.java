@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 public class LetterCombinationsPhoneNumber {
+
+     // not backtrack, it is recursive
+
     //https://leetcode.com/problems/letter-combinations-of-a-phone-number/solution/
     static Map<String, String> phone = new HashMap<String, String>() {{
         put("2", "abc");
