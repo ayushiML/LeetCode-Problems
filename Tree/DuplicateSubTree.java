@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DuplicateSubTree {
+    //https://leetcode.com/problems/find-duplicate-subtrees/
     static Map<String, Integer> map;
     static List<TreeNode> list;
     static class TreeNode {
