@@ -35,7 +35,7 @@ public class SkylineProblem {
                 p.remove(h[1]);
             int curr = p.peek();
             if(curr != prev)
-            {
+            {  
                 result.add(Arrays.asList(h[0], curr));
                 prev = curr;
             }
