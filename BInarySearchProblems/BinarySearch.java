@@ -1,3 +1,4 @@
+package BInarySearchProblems;
 public class BinarySearch {
     public static int search(int[] nums, int target) {
         return binarySearch( nums, 0 , nums.length-1, target);
