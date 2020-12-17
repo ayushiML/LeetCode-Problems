@@ -14,7 +14,22 @@ public class PathToNode {
         
         
     }
-  
+    public void printallPaths(TreeNode node ,ArrayList<Integer> ans )
+    {
+        if( node == null)
+         return ;
+         ans.add(node.val);
+         if( node.left == null && node.right == null)
+         {
+            ArrayList<Integer> result = new ArrayList<>(ans);
+            System.out.println(Arrays.toString(result.toArray()));
+            
+         }
+         printallPaths(node.left, ans);
+         printallPaths(node.right, ans);
+         ans.remove(ans.size()-1);
+         return;
+    }
     public boolean preorder(TreeNode A, int target, ArrayList<Integer> ans)
     {
         if(A == null)
@@ -42,6 +57,8 @@ public static void main(String[] args) {
 
         PathToNode p = new PathToNode();
         p.solve(root, 4);
+        ArrayList<Integer> ans  = new ArrayList<>();
+        p.printallPaths(root, ans);
 
 
 }

@@ -13,16 +13,18 @@ import javax.swing.plaf.synth.SynthStyle;
 
 public class Traversal {
     // topological sort : A DAG G has at least one vertex with in-degree 0 and one vertex with out-degree 0.
+    //Topological ordering is a linear ordering of vertices such 
+    //that for every directed edge uv, vertex u comes before v in the ordering.
     private LinkedList<Integer> adj[];
     private int v;
     Traversal(int v)
     {
-this.v = v;
-adj = new LinkedList[v];
-for(int i = 0 ; i < v ; i ++)
-{
-    adj[i] = new LinkedList<Integer>();
-}
+    this.v = v;
+    adj = new LinkedList[v];
+    for(int i = 0 ; i < v ; i ++)
+    {
+        adj[i] = new LinkedList<Integer>();
+    }
     }
 
     public static void main(String[] args) {
@@ -38,7 +40,7 @@ for(int i = 0 ; i < v ; i ++)
     }
 
     private void topologicalSort() {
-        boolean[] visited = new boolean[v];
+    boolean[] visited = new boolean[v];
     Stack<Integer> s = new Stack<>();
     for(int i = 0 ; i < v ; i++)
     {
