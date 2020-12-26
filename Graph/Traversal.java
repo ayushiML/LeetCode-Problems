@@ -50,7 +50,7 @@ public class Traversal {
     }
     System.out.println("topological sort with dfs modication method");
     while(!s.isEmpty())
-    {
+    {;
         System.out.print(s.pop());
     }
 
