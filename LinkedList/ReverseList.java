@@ -16,4 +16,17 @@ public class ReverseList {
         } 
         return prev;
     }
+    // recursive linkedlist
+    public ListNode revereseRecursive(ListNode head)
+    {
+        if(head == null || head.next == null)
+          return head;
+
+        ListNode newNode = revereseRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newNode;
+    }
+
 }

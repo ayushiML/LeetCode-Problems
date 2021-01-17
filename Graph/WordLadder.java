@@ -47,7 +47,7 @@ public class WordLadder {
               String word = curr.word;
               int dist = curr.distance;
 
-              if(word == endWord)
+              if(word.equals(endWord))
                 return dist;
                 
            for(int i = 0 ; i < word.length(); i++)

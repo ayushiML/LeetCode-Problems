@@ -26,4 +26,54 @@ public class KLargestNumber {
         int k = 3;
         System.out.println(findKthLargest(arr, k));
     }
+
+// quick select method
+
+    public static int findKthLargestQ(int[] nums, int k) {
+        int ans =  quickSort(nums, 0 , nums.length-1, k);
+          for(int i = 0 ; i < nums.length ;i++)
+          {
+              System.out.println(nums[i]);
+          }
+          return ans;
+          
+          
+      }
+      public static int quickSort(int[] nums , int low , int high , int k )
+      {
+          if(k > 0 && k <= (high-low +1))
+          {
+              int pi = parition(nums , low , high);
+              if(pi - low +1 == k)
+                  return nums[pi];
+              
+              if(pi - low +1 < k )
+                  
+              return quickSort(nums , pi+1, high , k -(pi - low +1));
+              return quickSort( nums , low , pi-1, k);
+          }
+           return Integer.MAX_VALUE; 
+          
+      }
+      public static  int parition(int[] nums , int low , int high)
+      {
+          int pivot = nums[high];
+          int i = low ;
+          for(int j = low ; j <= high-1 ; j++)
+          {
+              if(nums[j] >= pivot)
+              {
+                //  i++;
+                  int temp = nums[i];
+                  nums[i] = nums[j];
+                  nums[j] = temp;
+                  i++;
+              }
+          }
+                  int temp = nums[i];
+                  nums[i] = nums[high];
+                  nums[high] = temp;
+          return i;
+          
+      }
 }
