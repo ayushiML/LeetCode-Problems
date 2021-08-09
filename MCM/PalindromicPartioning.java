@@ -54,20 +54,26 @@ public class PalindromicPartioning {
     }
   
     public int minCutOptimized(String s) { // O(n2)
-        int len = s.length();
-        boolean[][] dp = new boolean[len][len];
-        int[] min = new int[len];
-        for (int i = 0; i < len; i++) {
-            min[i] = i;
-            for (int j = 0; j <= i; j++) {
-                if (s.charAt(i) == s.charAt(j) && (j + 1 > i - 1 || dp[j+1][i-1])) {
-                    dp[j][i] = true;
-                    min[i] = j == 0 ? 0 : Math.min(min[i], min[j-1] + 1);
+        int n = s.length();
+        if(n == 0 || n == 1)
+            return 0 ;
+        
+        int[] cuts = new int[n];
+        boolean[][] p = new boolean[n][n];
+        
+        
+        for(int len = 0 ; len < n ; len++){
+            cuts[len] = len;
+            for(int i = 0 ; i <= len;  i++)
+            {
+                if(s.charAt(i) == s.charAt(len) &&(i+1>len-1 || p[i+1][len-1]))
+                {
+                    p[i][len] = true;
+                    cuts[i] = i == 0 ? 0:Math.min(cuts[i],1+cuts[i-1]);
                 }
             }
         }
-        // last element in the min array will be the number of minimum cuts required
-        return min[len-1];
+        return cuts[n-1];
     }
     
 public static void main(String[] args) {
